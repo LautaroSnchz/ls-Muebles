@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Ls Design</title>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.svg" type="image/png">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="solicitar-asesoramiento.html">Asesorate</a>
+            <a href="ofertas.html">ofertas</a>
+        </nav>
+        <h1 id="titulo" class="titulo"></h1>
+        <H2>Productos en Stock</H2>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+
+    <select id="filtroMueble">
+        <option value="all">Todos</option>
+        <option value="mesa">Mesas</option>
+        <option value="silla">Sillas</option>
+        <option value="cama">Camas</option>
+    </select>
+
+
+    <main id="contenedor-productos">
+
+    </main>
+
+    
+    <footer>
+        <a href="https://facebook.com"><img class="redes" src="img/facebook.svg"></a>
+        <a href="https://instagram.com"><img class="redes" src="img/instagram.svg"></a>
+        <a href="https://www.tiktok.com"><img class="redes" src="img/tiktok.svg"></a>
+        <div class="container">
+            <p>&copy;Ls Muebles 2024</p>
+        </div>
+    </footer>
+<script defer src="stock.js"></script>
+
+<script defer src="app.js"></script>
+</body>
+</html>
