@@ -137,8 +137,9 @@ h1 {
     max-width: 1200px;
     margin: 60px auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;  
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
 }
 
 p {
@@ -163,6 +164,10 @@ p {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 139, 139, 0.12);
   border-color: rgba(0, 139, 139, 0.15);
+}
+
+.producto:hover img {
+    transform: scale(1.05);
 }
 
 .producto h3 {
@@ -191,7 +196,6 @@ p {
   font-size: 15px;
   font-weight: 700;
   padding: 10px 18px;
-  width: 100%;
   border: none;
   border-radius: 8px;
   color: white;
@@ -343,13 +347,6 @@ h1, h2, h3, h4, h5, h6, .logo {
   #hero h1 {
     color: white; }
   
-  #hero button {
-    font-size: 1.75em; }
-  
-  #SomosInterior-Design .container {
-    text-align: center;
-    padding: 200px 12px; }
-  
   #nuestros-productos {
     background-color: #1e1e1e;
     color: white;
@@ -395,39 +392,27 @@ h1, h2, h3, h4, h5, h6, .logo {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/productos-cama.jpg");
     background-position: center center; }
   
-  #caracteristicas .container {
-    text-align: center;
-    padding: 200px 12px; }
-  
-  #caracteristicas li {
-    margin: 12px 0px;
-    font-weight: bold; }
-  
-  #final {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #1e1e1e;
-    color: white;
-    height: 80vh; }
+/* Add hover effect for new feature cards */
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,139,139,0.1) !important;
+}
   
 
   
-  footer {
-    background-color: #e6e6e6; }
-  
-  footer p {
-    margin: 0;
-    color: #646464;
-    padding: 15px; }
-  
-  footer .container {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; }
+/* Nuevo Footer estilos */
+.transition-color {
+    transition: color 0.3s ease;
+}
+
+.hover-acento:hover {
+    color: darkcyan !important;
+}
+
+.social-icon:hover {
+    background-color: darkcyan !important;
+    transform: translateY(-3px);
+}
 
 
     @media (max-width: 720px) {
@@ -526,29 +511,7 @@ h1, h2, h3, h4, h5, h6, .logo {
     #ofertas, #asesorate {
       margin-top: 85px;
     }
-    #hero h1 {
-      font-size: 3em;
-      font-family: 'Courier New', Courier, monospace; }
-    #SomosInteriorDesign .container {
-      display: flex;
-      justify-content: space-evenly; }
-    #SomosInteriorDesign .texto {
-      width: 50%;
-      padding-left: 25px;
-      text-align: initial;
-      padding: 0px 30px;
-      max-width: 600px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column; }
-    #SomosInteriorDesign h2 {
-      margin-top: 0px; }
-    #SomosInteriorDesign .img-container {
-      background-image: url("img/annie-spratt-MChSQHxGZrQ-unsplash.jpg");
-      background-size: cover;
-      background-position: center center;
-      height: 500px;
-      width: 500px; }
+/* Cleaned up old SomosInteriorDesign desktop styles */
     #nuestros-productos .productos {
       display: flex;
       justify-content: center;
@@ -563,21 +526,7 @@ h1, h2, h3, h4, h5, h6, .logo {
       padding: 30px 20px;
       margin: 0;
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); }
-    #caracteristicas {
-      background-image: url(img/productos-mesilla.jpg);
-      background-repeat: no-repeat;
-      background-size: 500px 400px;
-      background-position: calc(100vw - 500px) 120px; }
-    #caracteristicas .container {
-      text-align: initial; }
-    #caracteristicas ul {
-      margin-left: 100px; }
-    footer .container {
-      justify-content: flex-end; } }
-  
-  @media (min-width: 1000px) {
-    #caracteristicas {
-      background-position-x: calc(100vw - 800px); } }
+/* Cleaned up old caracteristicas desktop background hack */
   
   .img-medium {
     max-width: 600px 600px;
@@ -620,43 +569,62 @@ h1, h2, h3, h4, h5, h6, .logo {
     color: white;
 }  
 
-.container-contacto{
-  margin-top: 20%;
-}
-.text-center {
-  margin-bottom: 15%;
-}
-
 #contacto {
   background-image: url('img/contacto-banner.jpg');
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
-  background-position: center; /* Centra la imagen */
-  padding: 80px 0; /* Ajusta el espaciado del contenido dentro de la sección */
+  background-size: cover; 
+  background-position: center; 
 }
 
-.contact-info {
-  background-color: #F8F9FA;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-.contact-info p {
-  margin: 0;
-  color: #343A40;
+/* We removed container-contacto and text-center margin-bottom because they break other pages */
+
+/* Asesoramiento Moderno */
+#asesorate {
+    background-color: #f4f6f8;
 }
 
-.contact-info p {
-  margin: 0;
-  color: #343A40;
+.asesorate-info {
+    background: linear-gradient(135deg, rgba(0, 139, 139, 0.9), rgba(16, 44, 44, 0.95)), url("img/productos-living.jpg") center/cover no-repeat;
 }
-.map-container {
-  height: 300px;
-  border-radius: 8px;
-  overflow: hidden;
+
+.asesorate-info h2 {
+    color: white !important; 
+    font-size: 2.4rem;
+}
+
+.asesorate-info p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.asesorate-info li {
+    font-size: 1.05rem;
+    color: white;
+}
+
+.asesorate-info i {
+    color: #a3e4e4;
+}
+
+.custom-input {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.custom-input:focus {
+    background-color: #fff;
+    border-color: darkcyan;
+    box-shadow: 0 0 0 4px rgba(0, 139, 139, 0.1);
+    outline: none;
+}
+
+.custom-input::placeholder {
+    color: #adb5bd;
 }
 
 @media (max-width: 768px) {

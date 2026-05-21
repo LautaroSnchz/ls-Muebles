@@ -32,7 +32,10 @@
 
     <div class="productos-bar">
         <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
-            <h2>Productos en Stock</h2>
+            <div>
+                <h2 class="display-5 fw-bold mb-1" style="font-family: 'Playfair Display', serif; color: #333;">Productos <span class="color-acento">en Stock</span></h2>
+                <p class="text-muted small mb-0" style="letter-spacing: 0.5px;">Renová tus espacios con diseños exclusivos</p>
+            </div>
             <div class="controles-productos d-flex align-items-center gap-3">
                 <div class="filtro-wrapper">
                     <i class="fas fa-filter"></i>
@@ -67,12 +70,40 @@
         </div>
     </div>
     
-    <footer>
-        <a href="https://facebook.com"><img class="redes" src="img/facebook.svg"></a>
-        <a href="https://instagram.com"><img class="redes" src="img/instagram.svg"></a>
-        <a href="https://www.tiktok.com"><img class="redes" src="img/tiktok.svg"></a>
+        <footer class="bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
-            <p>&copy;Ls Muebles 2024</p>
+            <div class="row mb-4 text-start">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="logo text-white mb-3 fs-3" style="font-family: 'Playfair Display', serif;">LS-Muebles</h4>
+                    <p class="text-white-50 small pe-md-4">Diseño y confort para cada rincón de tu hogar. Calidad que perdura.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none hover-acento transition-color">Inicio</a></li>
+                        <li><a href="productos.html" class="text-white-50 text-decoration-none hover-acento transition-color">Productos</a></li>
+                        <li><a href="ofertas.html" class="text-white-50 text-decoration-none hover-acento transition-color">Ofertas</a></li>
+                        <li><a href="contacto.html" class="text-white-50 text-decoration-none hover-acento transition-color">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Seguinos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://facebook.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 mt-4 text-center">
+                <p class="text-white-50 small mb-0">&copy; LS-Muebles 2026. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 <script defer src="stock.js"></script>

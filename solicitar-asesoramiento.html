@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
     <link rel="icon" href="img/logo.svg" type="image/png">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -28,36 +29,81 @@
     </header>
 
     <section id="asesorate" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Solicita <span class="color-acento">Asesoramiento</span></h2>
-            <form id="miFormulario">
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" required>
+        <div class="container my-5">
+            <div class="row g-0 rounded-4 shadow-lg overflow-hidden bg-white">
+                <!-- Lado Izquierdo (Info/Imagen) -->
+                <div class="col-lg-5 d-flex flex-column justify-content-center p-5 asesorate-info text-white">
+                    <h2 class="mb-4">Hablemos de tu proyecto</h2>
+                    <p class="mb-4">Nuestros expertos en diseño de interiores están listos para ayudarte a elegir los muebles perfectos para tu hogar. Dejanos tus datos y te contactaremos a la brevedad.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-4 d-flex align-items-center"><i class="fas fa-map-marker-alt me-3 fs-5"></i> Av. Siempre Viva 123, Rafaela</li>
+                        <li class="mb-4 d-flex align-items-center"><i class="fas fa-phone-alt me-3 fs-5"></i> +54 9 3492 12-3456</li>
+                        <li class="mb-4 d-flex align-items-center"><i class="fas fa-envelope me-3 fs-5"></i> asesoria@ls-muebles.com</li>
+                    </ul>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" required>
+                <!-- Lado Derecho (Formulario) -->
+                <div class="col-lg-7 p-5">
+                    <h3 class="mb-4" style="color: #333; font-size: 2rem;">Solicitá <span class="color-acento">Asesoramiento</span></h3>
+                    <form id="miFormulario">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="nombre" class="form-label text-muted fw-bold">Nombre completo</label>
+                                <input type="text" class="form-control custom-input" id="nombre" placeholder="Ej: Juan Pérez" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="telefono" class="form-label text-muted fw-bold">Teléfono</label>
+                                <input type="tel" class="form-control custom-input" id="telefono" placeholder="Ej: +54 9 3492...">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label text-muted fw-bold">Correo Electrónico</label>
+                            <input type="email" class="form-control custom-input" id="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensaje" class="form-label text-muted fw-bold">Contanos sobre tu idea o espacio</label>
+                            <textarea class="form-control custom-input" id="mensaje" rows="4" placeholder="Quiero renovar mi living y me gustaría saber..." required></textarea>
+                        </div>
+                        <button type="submit" class="boton-agregar w-100 py-3 mt-2" onclick="Controlar()">Enviar Solicitud</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="telefono" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="telefono">
-                </div>
-                <div class="mb-3">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="button agregar" onclick="Controlar()">Enviar</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <a href="https://facebook.com"><img class="redes" src="img/facebook.svg"></a>
-        <a href="https://instagram.com"><img class="redes" src="img/instagram.svg"></a>
-        <a href="https://www.tiktok.com"><img class="redes" src="img/tiktok.svg"></a>
+        <footer class="bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
-            <p>&copy;LS Muebles 2024</p>
+            <div class="row mb-4 text-start">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="logo text-white mb-3 fs-3" style="font-family: 'Playfair Display', serif;">LS-Muebles</h4>
+                    <p class="text-white-50 small pe-md-4">Diseño y confort para cada rincón de tu hogar. Calidad que perdura.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none hover-acento transition-color">Inicio</a></li>
+                        <li><a href="productos.html" class="text-white-50 text-decoration-none hover-acento transition-color">Productos</a></li>
+                        <li><a href="ofertas.html" class="text-white-50 text-decoration-none hover-acento transition-color">Ofertas</a></li>
+                        <li><a href="contacto.html" class="text-white-50 text-decoration-none hover-acento transition-color">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Seguinos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://facebook.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 mt-4 text-center">
+                <p class="text-white-50 small mb-0">&copy; LS-Muebles 2026. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 

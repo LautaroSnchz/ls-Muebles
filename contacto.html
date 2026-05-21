@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
     <link rel="icon" href="img/logo.svg" type="image/png">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -26,34 +27,97 @@
             </nav>
         </div>
     </header>
-    <section id="contacto" class="py-5">
-        <div class="container-contacto">
-            <h2 class="text-center">Contacto</h2>
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                    <div class="contact-info w-100">
-                        <p>Nos puedes encontrar en: <span class="color-acento">Argentina - Santa Fe</span></p>
-                        <p>Ciudad: <span class="color-acento">Rafaela</span></p>
-                        <p>Dirección:<span class="color-acento">Avenida Siempre Viva 743</span></p>
-                        <p>Teléfono:<span class="color-acento">3492- 0303456</span></p>
-                        <p>Correo Electrónico:<span class="color-acento">info@lsMuebles.com</span></p>
+    <section id="contacto" class="d-flex align-items-center position-relative min-vh-100">
+        <!-- Overlay oscuro -->
+        <div class="position-absolute w-100 h-100" style="background-color: rgba(16, 44, 44, 0.85); top: 0; left: 0; z-index: 1;"></div>
+        
+        <div class="container position-relative z-3" style="margin-top: 80px; margin-bottom: 80px;">
+            <div class="text-center mb-5">
+                <h2 class="text-white display-4 fw-bold">Nuestra <span class="color-acento">Ubicación</span></h2>
+                <p class="text-white-50 fs-5">Vení a conocer nuestro showroom o contactanos por cualquier duda.</p>
+            </div>
+            
+            <div class="row g-0 rounded-4 shadow-lg overflow-hidden bg-white">
+                <!-- Info de Contacto -->
+                <div class="col-lg-5 p-5 d-flex flex-column justify-content-center bg-light">
+                    <h3 class="mb-4" style="color: #333; font-size: 1.8rem;">Información de Contacto</h3>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-white rounded-circle shadow-sm d-flex justify-content-center align-items-center me-4" style="width: 50px; height: 50px; min-width: 50px;">
+                            <i class="fas fa-map-marker-alt fs-5 color-acento"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 fs-6">Dirección</h5>
+                            <p class="text-muted mb-0 small">Av. Siempre Viva 743<br>Rafaela, Santa Fe, Argentina</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-white rounded-circle shadow-sm d-flex justify-content-center align-items-center me-4" style="width: 50px; height: 50px; min-width: 50px;">
+                            <i class="fas fa-phone-alt fs-5 color-acento"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 fs-6">Teléfono</h5>
+                            <p class="text-muted mb-0 small">+54 9 3492 030-3456</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="bg-white rounded-circle shadow-sm d-flex justify-content-center align-items-center me-4" style="width: 50px; height: 50px; min-width: 50px;">
+                            <i class="fas fa-envelope fs-5 color-acento"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 fs-6">Correo Electrónico</h5>
+                            <p class="text-muted mb-0 small">info@lsmuebles.com</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1603.3335503036958!2d-61.503797301796034!3d-31.22945969639418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95caae460db27c0f%3A0x8be1b926d473c17b!2sRafaela%2C%20Santa%20Fe!5e1!3m2!1ses-419!2sar!4v1715755941788!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                
+                <!-- Mapa -->
+                <div class="col-lg-7 d-flex bg-light position-relative">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1603.3335503036958!2d-61.503797301796034!3d-31.22945969639418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95caae460db27c0f%3A0x8be1b926d473c17b!2sRafaela%2C%20Santa%20Fe!5e1!3m2!1ses-419!2sar!4v1715755941788!5m2!1ses-419!2sar" class="w-100 flex-grow-1" style="border:0; min-height: 400px; filter: grayscale(100%) contrast(1.15) sepia(30%) hue-rotate(135deg) opacity(0.9); transition: all 0.4s ease;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onmouseover="this.style.filter='grayscale(0.5) contrast(1.1) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) contrast(1.15) sepia(30%) hue-rotate(135deg) opacity(0.9)'"></iframe>
+                    
+                    <!-- Overlay sutil para efecto 'relieve/premium' -->
+                    <div class="position-absolute w-100 h-100 pointer-events-none" style="top: 0; left: 0; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,139,139,0.05) 100%); pointer-events: none;"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <a href="https://facebook.com"><img class="redes" src="img/facebook.svg"></a>
-        <a href="https://instagram.com"><img class="redes" src="img/instagram.svg"></a>
-        <a href="https://www.tiktok.com"><img class="redes" src="img/tiktok.svg"></a>
+        <footer class="bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
-            <p>&copy;Ls Muebles 2024</p>
+            <div class="row mb-4 text-start">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="logo text-white mb-3 fs-3" style="font-family: 'Playfair Display', serif;">LS-Muebles</h4>
+                    <p class="text-white-50 small pe-md-4">Diseño y confort para cada rincón de tu hogar. Calidad que perdura.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none hover-acento transition-color">Inicio</a></li>
+                        <li><a href="productos.html" class="text-white-50 text-decoration-none hover-acento transition-color">Productos</a></li>
+                        <li><a href="ofertas.html" class="text-white-50 text-decoration-none hover-acento transition-color">Ofertas</a></li>
+                        <li><a href="contacto.html" class="text-white-50 text-decoration-none hover-acento transition-color">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Playfair Display', serif;">Seguinos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://facebook.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com" class="social-icon bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: all 0.3s ease;">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 mt-4 text-center">
+                <p class="text-white-50 small mb-0">&copy; LS-Muebles 2026. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
     

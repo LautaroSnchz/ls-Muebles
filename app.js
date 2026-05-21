@@ -21,12 +21,17 @@ stockProductos.forEach((producto) => {
     const div = document.createElement('div')
     div.classList.add('producto')
     div.innerHTML = `
-    <img src=${producto.img} alt= "">
-    <h3>${producto.nombre}</h3>
-    <p>${producto.desc}</p>
-    <p class="precioProducto">Precio:$ ${producto.precio}</p>
-    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-
+    <div class="img-container position-relative overflow-hidden mb-3" style="border-radius: 8px;">
+        <img src="${producto.img}" alt="${producto.nombre}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; transition: transform 0.4s ease;">
+    </div>
+    <h3 class="fs-5 fw-bold text-dark mb-2">${producto.nombre}</h3>
+    <p class="text-muted small mb-3" style="flex-grow: 1;">${producto.desc}</p>
+    <div class="d-flex justify-content-between align-items-center mt-auto pt-3" style="border-top: 1px solid #f0f0f0;">
+        <p class="precioProducto mb-0 fs-5 fw-bold color-acento">$${producto.precio}</p>
+        <button id="agregar${producto.id}" class="boton-agregar d-flex align-items-center justify-content-center" style="width: auto; padding: 8px 16px;">
+            <i class="fas fa-shopping-cart me-2"></i> Sumar
+        </button>
+    </div>
     `
     contenedorProductos.appendChild(div)
 
