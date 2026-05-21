@@ -9,30 +9,47 @@
     <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/logo.svg" type="image/png">
     
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="#">Productos</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="solicitar-asesoramiento.html">Asesorate</a>
-            <a href="ofertas.html">ofertas</a>
-        </nav>
-        <h1 id="titulo" class="titulo"></h1>
-        <H2>Productos en Stock</H2>
-        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+        <div class="container">
+            <p class="logo">LS-Muebles</p>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="#" class="active">Productos</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="solicitar-asesoramiento.html">Asesorate</a>
+            </nav>
+        </div>
     </header>
 
-    <select id="filtroMueble">
-        <option value="all">Todos</option>
-        <option value="mesa">Mesas</option>
-        <option value="silla">Sillas</option>
-        <option value="cama">Camas</option>
-    </select>
+    <div class="productos-bar">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <h2>Productos en Stock</h2>
+            <div class="controles-productos d-flex align-items-center gap-3">
+                <div class="filtro-wrapper">
+                    <i class="fas fa-filter"></i>
+                    <select id="filtroMueble">
+                        <option value="all">Todos los productos</option>
+                        <option value="mesa">Mesas</option>
+                        <option value="silla">Sillas</option>
+                        <option value="cama">Camas</option>
+                    </select>
+                </div>
+                <button id="boton-carrito" class="btn-carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="contadorCarrito">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
 
     <main id="contenedor-productos">
